@@ -1,68 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,300;1,400&display=swap');
 :root {
-  --gap: 10px;
+  font-size: 16px;
 }
 
 body {
-  margin: 0;
   background-color: black;
+  color: white;
+  font-family: Roboto;
   height: 100vh;
+  margin: 0;
   display: flex;
+  background-image: url(./images/world.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-
-/* grid-template-columns: repeat(3, minmax(100px, 293px)); */
-main {
-  display: grid;
-  grid-template-columns: .9fr .576fr .94fr;
-  gap: var(--gap);
-  width: 100%;
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+}
+.hero {
+  width: max-content;
   margin: auto;
+  text-align: center;
 }
-main div {
-  display: flex;
-  flex-direction: column;
-  /* width: 100%; */
+.hero h1 {
+  margin: .1em 0;
 }
-main div img:last-child {
-  margin-top: var(--gap);
+.hero img {
+  width: 9em;
 }
-img {
-  width: 100%;
+.hero p {
+  width: 43em;
+  background-color: rgba(10, 10, 10, 0.37);
+  border-radius: 1.5625em;
+  padding: 1em;
+  font-size: 1.2em;
+  margin: auto;
+  margin-bottom: 2em;
+}
+.hero .button {
+  color: white;
+  background-color: rgba(214, 154, 0, 0.58);
+  padding: .5em 1.5em;
+  border-radius: 1.5625em;
+  font-size: 1.7em;
+  text-decoration: none;
+  user-select: none;
 }
 
-@media screen and (max-aspect-ratio: 5/4) {
-  /* main {
-    display: flex;
-    flex-wrap: wrap;
-  } */
-  body {
-    height: 100%;
-  }
-  main {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin: var(--gap);
-    height: 100%;
-  }
-  main div:last-child {
-    transform: translateY(-35.5%);
-  }
-}
 @media screen and (max-width: 425px) {
   :root {
-    --gap: 5px;
+    font-size: 3.1vw;
   }
-  main {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  main div:first-child {
-    margin-bottom: var(--gap);
-  }
-  main div:last-child {
-    transform: none;
-    margin-top: var(--gap);
+  .hero p {
+    width: 17em;
   }
 }
-
-
-/* width 1300 */
